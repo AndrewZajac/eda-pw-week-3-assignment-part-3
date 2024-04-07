@@ -98,11 +98,18 @@ console.log(partsCount);
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
 
-let largeStash = 572;
+const largeStash = 572;
 let eachPart = 1;
-let box = eachPart * 7;
-while(box < largeStash){
-    console.log('box filled', box);
-    box += 7 ;
+let box = 0;
+let remainingParts = 0;
+while(eachPart <= largeStash){
+    if(eachPart % 7 === 0){
+        box ++;
+    } 
+    else (
+        remainingParts = eachPart % 7
+    )
+    eachPart ++;
 }
-console.log('Amount of boxes filled:', box)
+console.log('Amount of boxes filled: ', box)
+console.log('Amount of remaining parts: ', remainingParts);
